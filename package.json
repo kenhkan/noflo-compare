@@ -23,7 +23,6 @@
   { "noflo": "https://github.com/kenhkan/noflo/tarball/master"
   , "underscore": "1.4.x"
   , "underscore.string": "2.3.x"
-  , "node-uuid": "1.4.x"
   }
 , "devDependencies":
   { "coffeelint": "*"

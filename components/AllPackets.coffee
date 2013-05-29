@@ -1,6 +1,6 @@
-noflo = require("noflo")
-_ = require("underscore")
-_s = require("underscore.string")
+noflo = require "noflo"
+_ = require "underscore"
+_s = require "underscore.string"
 
 class AllPackets extends noflo.Component
 
@@ -12,7 +12,7 @@ class AllPackets extends noflo.Component
     @connections = []
 
     @inPorts =
-      in: new noflo.Port
+      in: new noflo.ArrayPort
     @outPorts =
       out: new noflo.Port
 
@@ -20,14 +20,14 @@ class AllPackets extends noflo.Component
       @connection = []
 
     @inPorts.in.on "data", (data) =>
-      @connection.push(data)
+      @connection.push data
 
     @inPorts.in.on "disconnect", =>
-      @connections.push(@connection)
+      @connections.push @connection
 
       if @connections.length is 2
         winningConnection = @compare()
-        @outPorts.out.send(data) for data in winningConnection
+        @outPorts.out.send data for data in winningConnection
         @outPorts.out.disconnect()
 
         @connections = []

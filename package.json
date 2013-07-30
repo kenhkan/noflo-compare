@@ -1,41 +1,55 @@
-{ "name": "noflo-compare"
-, "description": "Performing Comparisons in NoFlo"
-, "keywords":
-  [ "noflo"
-  , "compare"
-  , "utilities"
-  ]
-, "author": "Kenneth Kan <kenhkan@gmail.com>"
-, "version": "0.0.5"
-, "licenses":
-  [ { "type": "MIT"
-    , "url": "https://github.com/kenhkan/noflo-compare/blob/master/LICENSE.md"
+{
+  "name": "compare",
+  "description": "Performing Comparisons in NoFlo",
+  "keywords": [
+    "noflo",
+    "compare",
+    "utilities"
+  ],
+  "version": "0.1.1",
+  "author": {
+    "name": "Kenneth Kan",
+    "email": "kenhkan@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kenhkan/compare.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/kenhkan/noflo-compare/blob/master/LICENSE.md"
     }
-  ]
-, "engines":
-  { "node": ">=0.6.0"
-  }
-, "repository":
-  { "type": "git"
-  , "url": "git://github.com/kenhkan/noflo-compare"
-  }
-, "dependencies":
-  { "noflo": "https://github.com/kenhkan/noflo/tarball/master"
-  , "underscore": "1.4.x"
-  , "underscore.string": "2.3.x"
-  }
-, "devDependencies":
-  { "coffeelint": "*"
-  , "coffee-script": "1.6.x"
-  , "noflo-test": "https://github.com/kenhkan/noflo-test/tarball/master"
-  }
-, "noflo":
-  { "components":
-    { "AllPackets": "./components/AllPackets.coffee"
+  ],
+  "dependencies": {
+    "noflo": "~0.3.3",
+    "underscore": "~1.5.1",
+    "underscore.string": "~2.3.3"
+  },
+  "devDependencies": {
+    "coffeelint": "*",
+    "coffee-script": "1.6.x",
+    "grunt": "~0.4.1",
+    "grunt-contrib-coffee": "~0.6.6",
+    "grunt-coffeelint": "~0.0.6",
+    "grunt-cafe-mocha": "~0.1.2",
+    "chai": "~1.5.0",
+    "mocha": "~1.9.0",
+    "grunt-mocha-phantomjs": "~0.2.2",
+    "grunt-component-build": "~0.2.7",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-watch": "~0.3.1",
+    "component-json": "~0.1.4",
+    "grunt-combine": "~0.8.3",
+    "grunt-component": "~0.1.2"
+  },
+  "noflo": {
+    "components": {
+      "AllPackets": "./components/AllPackets.coffee"
     }
-  }
-, "scripts":
-  { "pretest": "./node_modules/.bin/coffeelint -r components"
-  , "test": "./node_modules/.bin/noflo-test --spec test/*.coffee"
+  },
+  "scripts": {
+    "pretest": "./node_modules/.bin/coffeelint -r components/*.coffee spec/*.coffee",
+    "test": "./node_modules/.bin/mocha --compilers coffee:coffee-script spec/*.coffee"
   }
 }

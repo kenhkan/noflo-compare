@@ -1,0 +1,4 @@
+Error: Failed to require "noflo-adapters/components/AllPackets.js" from "root"
+
+  file:///Users/kenhkan/Desktop/hacking/noflo-/compare/browser/compare.js:21
+  file:///Users/kenhkan/Desktop/hacking/noflo-/compare/spec/AllPackets.js:11

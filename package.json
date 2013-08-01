@@ -23,8 +23,7 @@
   ],
   "dependencies": {
     "noflo": "~0.4.0",
-    "underscore": "~1.5.1",
-    "underscore.string": "~2.3.3"
+    "underscore": "~1.5.1"
   },
   "devDependencies": {
     "coffeelint": "*",

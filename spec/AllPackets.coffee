@@ -48,8 +48,8 @@ describe 'AllPackets component', ->
     input1 = ['abc', 'def', 'ghi']
     input2 = ['aaa', 'zzz', 'ggg']
 
-    it 'the first one wins because it has more
-      lexicographically bigger strings', (done) ->
+    it 'the first one wins because it has more lexicographically bigger strings
+    you know', (done) ->
       packets = ['abc', 'def', 'ghi']
 
       out.on 'data', (data) ->
@@ -67,8 +67,8 @@ describe 'AllPackets component', ->
       ins.disconnect()
 
   describe 'groups are ignored and dropped', ->
-    it 'the first one wins because it has more
-      winning counts, but without groups', (done) ->
+    it 'the first one wins because it has more winning counts, but without
+    groups', (done) ->
       packets = ['abc', 'aaa']
 
       out.on 'begingroup', (group) ->

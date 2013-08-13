@@ -6,7 +6,7 @@
     "compare",
     "utilities"
   ],
-  "version": "0.1.2",
+  "version": "0.2.0",
   "author": {
     "name": "Kenneth Kan",
     "email": "kenhkan@gmail.com"
@@ -23,7 +23,9 @@
   ],
   "dependencies": {
     "noflo": "~0.4.0",
-    "underscore": "~1.5.1"
+    "underscore": "~1.5.1",
+    "noflo-swiss": "0.0.x",
+    "noflo-cache": "0.0.x"
   },
   "devDependencies": {
     "coffeelint": "*",
@@ -45,6 +47,10 @@
   "noflo": {
     "components": {
       "AllPackets": "./components/AllPackets.coffee"
+    },
+    "graphs": {
+      "IsEmpty": "./graphs/IsEmpty.fbp",
+      "IsEqual": "./graphs/IsEqual.fbp"
     }
   },
   "scripts": {
